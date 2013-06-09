@@ -1,24 +1,24 @@
-Репозиторий предназначен для хранения различных 
-шаблонов документов в системе компьютерной вёрстки TeX.
+Р РµРїРѕР·РёС‚РѕСЂРёР№ РїСЂРµРґРЅР°Р·РЅР°С‡РµРЅ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… 
+С€Р°Р±Р»РѕРЅРѕРІ РґРѕРєСѓРјРµРЅС‚РѕРІ РІ СЃРёСЃС‚РµРјРµ РєРѕРјРїСЊСЋС‚РµСЂРЅРѕР№ РІС‘СЂСЃС‚РєРё TeX.
 
-Ссылка на репозиторий:
+РЎСЃС‹Р»РєР° РЅР° СЂРµРїРѕР·РёС‚РѕСЂРёР№:
 https://bitbucket.org/egor_pugin/tex/
 
-Полезные ссылки:
+РџРѕР»РµР·РЅС‹Рµ СЃСЃС‹Р»РєРё:
 http://ru.wikipedia.org/wiki/TeX
 http://en.wikipedia.org/wiki/TeX
 http://www.latex-project.org/
 
-Документация:
+Р”РѕРєСѓРјРµРЅС‚Р°С†РёСЏ:
 LaTeX2e reference manual (latest):
 http://mirrors.nlab.su/ctan/info/latex2e-help-texinfo/latex2e.html
-Не очень кратное введение в LaTeX 2e (2003):
+РќРµ РѕС‡РµРЅСЊ РєСЂР°С‚РЅРѕРµ РІРІРµРґРµРЅРёРµ РІ LaTeX 2e (2003):
 http://texdoc.net/texmf-dist/doc/latex/lshort-russian/lshortru.pdf
 
-Скачать TeX:
+РЎРєР°С‡Р°С‚СЊ TeX:
 1. Windows
-MiKTeX - http://www.miktex.org/download - ядро (обязательно)
-TeX Studio - http://texstudio.sourceforge.net/ - многофункциональный редактор
+MiKTeX - http://www.miktex.org/download - СЏРґСЂРѕ (РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ)
+TeX Studio - http://texstudio.sourceforge.net/ - РјРЅРѕРіРѕС„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅС‹Р№ СЂРµРґР°РєС‚РѕСЂ
 
 2. Linux (Ubuntu)
 sudo apt-get install texlive

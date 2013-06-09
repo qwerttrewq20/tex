@@ -1,9 +1,9 @@
-\documentclass[russian,cp1251,simple]{eskdtext}
+\documentclass[russian,utf8,simple]{eskdtext}
 
 % packages
 %
-% Тестовое наполнение текстом
-% При написании работы - удалить пакет и комманды \lipsum
+% РўРµСЃС‚РѕРІРѕРµ РЅР°РїРѕР»РЅРµРЅРёРµ С‚РµРєСЃС‚РѕРј
+% РџСЂРё РЅР°РїРёСЃР°РЅРёРё СЂР°Р±РѕС‚С‹ - СѓРґР°Р»РёС‚СЊ РїР°РєРµС‚ Рё РєРѕРјРјР°РЅРґС‹ \lipsum
 \usepackage{lipsum}
 %
 \usepackage{graphicx}
@@ -12,26 +12,26 @@
 \usepackage{hyperref} % Links in pdf
 
 % setup
-\newcommand{\FrontPageDepartment}{ИТ} %Факультет
-\newcommand{\FrontPageSubdepartment}{ИС} %Кафедра
-\newcommand{\WorkType}{Курсовой проект} %Тип работы (заголовок)
-\newcommand{\Subject}{Предмет} %по ... родительный падеж
-\newcommand{\Topic}{Тема курсового проекта} %Тема
-\newcommand{\Professor}{Иванов~И.~И.} %Руководитель
-\newcommand{\Student}{Петров~П.~П.} %Студент
-\newcommand{\Group}{ИСм-112} %Группа
-\newcommand{\FrontPageDate}{\ddmmyyyydate\today} %Дата
+\newcommand{\FrontPageDepartment}{РРў} %Р¤Р°РєСѓР»СЊС‚РµС‚
+\newcommand{\FrontPageSubdepartment}{РРЎ} %РљР°С„РµРґСЂР°
+\newcommand{\WorkType}{РљСѓСЂСЃРѕРІРѕР№ РїСЂРѕРµРєС‚} %РўРёРї СЂР°Р±РѕС‚С‹ (Р·Р°РіРѕР»РѕРІРѕРє)
+\newcommand{\Subject}{РџСЂРµРґРјРµС‚} %РїРѕ ... СЂРѕРґРёС‚РµР»СЊРЅС‹Р№ РїР°РґРµР¶
+\newcommand{\Topic}{РўРµРјР° РєСѓСЂСЃРѕРІРѕРіРѕ РїСЂРѕРµРєС‚Р°} %РўРµРјР°
+\newcommand{\Professor}{РРІР°РЅРѕРІ~Р.~Р.} %Р СѓРєРѕРІРѕРґРёС‚РµР»СЊ
+\newcommand{\Student}{РџРµС‚СЂРѕРІ~Рџ.~Рџ.} %РЎС‚СѓРґРµРЅС‚
+\newcommand{\Group}{РРЎРј-112} %Р“СЂСѓРїРїР°
+\newcommand{\FrontPageDate}{\ddmmyyyydate\today} %Р”Р°С‚Р°
 
-\ESKDsignature{МИВУ 230400.68 ПЗ} % Код специальности и тип работы
+\ESKDsignature{РњРР’РЈ 230400.68 РџР—} % РљРѕРґ СЃРїРµС†РёР°Р»СЊРЅРѕСЃС‚Рё Рё С‚РёРї СЂР°Р±РѕС‚С‹
 
 % eskdx setup
-\ESKDletter{}{У}{}
+\ESKDletter{}{РЈ}{}
 \ESKDtitle{\Topic}
 \ESKDchecker{\Professor}
 \ESKDauthor{\Student}
-\ESKDcolumnIX{МИ ВлГУ\\ \Group}
+\ESKDcolumnIX{РњР Р’Р»Р“РЈ\\ \Group}
 
-\addto\captionsrussian{\def\refname{Список использованных источников}}
+\addto\captionsrussian{\def\refname{РЎРїРёСЃРѕРє РёСЃРїРѕР»СЊР·РѕРІР°РЅРЅС‹С… РёСЃС‚РѕС‡РЅРёРєРѕРІ}}
 \graphicspath{{img/}} % path to directory with images
 \sloppy % split long lines
 
@@ -43,26 +43,26 @@
 
 % main document
 \begin{document}
-% Титул
+% РўРёС‚СѓР»
 \input{frontpage.tex}
 \ESKDthisStyle{title}
 \clearpage
 
-% Аннотация
+% РђРЅРЅРѕС‚Р°С†РёСЏ
 \input{annotation.tex}
 \ESKDthisStyle{empty}
 \newpage
 
-% Содержание
+% РЎРѕРґРµСЂР¶Р°РЅРёРµ
 \setcounter{page}{4}
 \tableofcontents
 \ESKDthisStyle{formII}
 \newpage
 
-% Основной текст
+% РћСЃРЅРѕРІРЅРѕР№ С‚РµРєСЃС‚
 \input{text.tex}
 \newpage
 
-% Список литературы
+% РЎРїРёСЃРѕРє Р»РёС‚РµСЂР°С‚СѓСЂС‹
 \input{bibliography.tex}
 \end{document}
