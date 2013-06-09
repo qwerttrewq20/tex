@@ -44,19 +44,19 @@
 % main document
 \begin{document}
 % Титул
-\input{frontpage.tex}
 \ESKDthisStyle{title}
-\clearpage
+\input{frontpage.tex}
+\newpage
 
 % Аннотация
-\input{annotation.tex}
 \ESKDthisStyle{empty}
+\input{annotation.tex}
 \newpage
 
 % Содержание
 \setcounter{page}{4}
-\tableofcontents
 \ESKDthisStyle{formII}
+\tableofcontents
 \newpage
 
 % Основной текст
