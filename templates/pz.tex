@@ -33,25 +33,20 @@
 \ESKDcolumnIX{МИ ВлГУ\\ \Group}
 
 \addto\captionsrussian{\def\refname{Список использованных источников}}
-\graphicspath{{img/}} % path to directory with images
 \sloppy % split long lines
 
-% verbatim setup
-\newcommand{\verbatimFont}{
-\fontsize{10pt}{12pt}\selectfont
-\baselineskip=1em
-}
+\input{src/setup.tex}
 
 % main document
 \begin{document}
 % Титул
 \ESKDthisStyle{title}
-\input{frontpage.tex}
+\input{src/frontpage.tex}
 \newpage
 
 % Аннотация
 \ESKDthisStyle{empty}
-\input{annotation.tex}
+\input{src/annotation.tex}
 \newpage
 
 % Содержание
@@ -61,9 +56,9 @@
 \newpage
 
 % Основной текст
-\input{text.tex}
+\input{src/text.tex}
 \newpage
 
 % Список литературы
-\input{bibliography.tex}
+\input{src/bibliography.tex}
 \end{document}
