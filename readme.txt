@@ -21,6 +21,8 @@ MiKTeX - http://www.miktex.org/download - ядро (обязательно)
 
 2. Linux (Ubuntu)
 sudo apt-get install texlive
+или
+sudo apt-get install texlive-full
 
 3. Mac OS X
 MacTeX - http://www.tug.org/mactex/
