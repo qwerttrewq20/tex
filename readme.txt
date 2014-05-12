@@ -4,16 +4,24 @@
 Ссылка на репозиторий:
 https://bitbucket.org/egor_pugin/tex/
 
-Полезные ссылки:
-http://ru.wikipedia.org/wiki/TeX
-http://en.wikipedia.org/wiki/TeX
-http://www.latex-project.org/
 
 Документация:
+
+О TeX/LaTeX:
+http://ru.wikipedia.org/wiki/TeX (ru)
+http://en.wikipedia.org/wiki/TeX (en)
+http://www.latex-project.org/ (en)
+
 LaTeX2e reference manual (latest):
-http://mirrors.nlab.su/ctan/info/latex2e-help-texinfo/latex2e.html
+http://mirror.macomnet.net/pub/CTAN/info/latex2e-help-texinfo/latex2e.html (en)
+http://mirrors.ctan.org/info/latex2e-help-texinfo/latex2e.pdf (en)
+
 Не очень краткое введение в LaTeX 2e (2003):
-http://texdoc.net/texmf-dist/doc/latex/lshort-russian/lshortru.pdf
+http://texdoc.net/texmf-dist/doc/latex/lshort-russian/lshortru.pdf (ru)
+
+Каталог классов и стилей LaTeX (несколько частей, ссылка на первую часть):
+https://www.ibm.com/developerworks/ru/library/latex_styles_01/ (ru)
+
 
 Скачать TeX:
 1. Windows
