@@ -24,6 +24,7 @@ https://www.ibm.com/developerworks/ru/library/latex_styles_01/ (ru)
 
 
 Скачать TeX:
+
 1. Windows
 MiKTeX - http://www.miktex.org/download - ядро (обязательно)
 
@@ -35,5 +36,11 @@ sudo apt-get install texlive-full
 3. Mac OS X
 MacTeX - http://www.tug.org/mactex/
 
-Многофункциональный редактор (все платформы):
+
+Редакторы TeX:
+
+Многофункциональный редактор исходного кода (все платформы):
 TeX Studio - http://texstudio.sourceforge.net/
+
+Редактор WYSIWYM (англ. what you see is what you mean, примерный перевод — «видишь то, что подразумеваешь»), наподобие Microsoft Word:
+http://www.lyx.org/
