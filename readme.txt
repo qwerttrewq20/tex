@@ -19,8 +19,8 @@ http://mirrors.ctan.org/info/latex2e-help-texinfo/latex2e.pdf (en)
 Не очень краткое введение в LaTeX 2e (2003):
 http://texdoc.net/texmf-dist/doc/latex/lshort-russian/lshortru.pdf (ru)
 
-Каталог классов и стилей LaTeX (несколько частей, ссылка на первую часть):
-https://www.ibm.com/developerworks/ru/library/latex_styles_01/ (ru)
+Каталог классов и стилей LaTeX (несколько частей):
+http://www.inp.nsk.su/~baldin/LaTeX/index.html
 
 
 Скачать TeX:
