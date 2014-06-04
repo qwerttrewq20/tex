@@ -4,12 +4,15 @@
 *.ps
 *.log
 *.pdf
-*.gz
+*.synctex.gz
 *.toc
 *.out
 *.bbl
 *.blg
+*.run.xml
+*.bcf
 
 # backups
 *~
+*.bak
 

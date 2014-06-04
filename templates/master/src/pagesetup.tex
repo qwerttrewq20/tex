@@ -1,0 +1,142 @@
+% paragraph indent
+\setlength{\parindent}{1.25cm}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% lists
+\setlist{nolistsep} % No vertical spaces between items in lists
+\renewcommand{\alph}[1]{\asbuk{#1}} % cyrillic numbering (letters)
+\setenumerate[1]{label=\alph*), fullwidth, itemindent=\parindent,
+  listparindent=\parindent}
+\setenumerate[2]{label=\arabic*), fullwidth, itemindent=\parindent,
+  listparindent=\parindent, leftmargin=\parindent}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% titles
+\titleformat{\chapter}[block]
+  {\indent\indent\bfseries}{\MakeUppercase{\chaptertitlename}\ \thechapter}{1ex}{\filright\MakeUppercase}
+\titleformat{\section}[block]{\indent\indent\bfseries}{\thesection}{1ex}{\filright}
+\titleformat{\subsection}[block]{\indent\indent}{\thesubsection}{1ex}{\filright}
+\titleformat{\subsubsection}[block]{\indent\indent}{\thesubsubsection}{1ex}{\filright}
+
+\titlespacing*{\chapter}{0pt}{0pt}{1em}
+%\titlespacing*{\section}{0pt}{1em}{1em}
+%\titlespacing*{\subsection}{0pt}{1em}{1ex}
+%\titlespacing*{\subsubsection}{0pt}{1em}{1ex}
+
+\newcommand{\MakeUppercasePdf}[1]{\texorpdfstring{\MakeUppercase{#1}}{#1}}
+
+\makeatletter
+\newcommand{\Chapter}{\@ifstar\@sChapter\@Chapter}
+%
+\newcommand{\@sChapter}[1]{
+  \chapter*{\MakeUppercase{#1}}
+  \addcontentsline{toc}{chapter}{\MakeUppercasePdf{#1}}
+}
+%
+\newcommand{\@Chapter}[1]{
+  \stepcounter{chapter}
+  \chapter*{\MakeUppercase{\chaptertitlename}\ \thechapter\ \MakeUppercase{#1}}
+  \addcontentsline{toc}{chapter}{\MakeUppercasePdf{\chaptertitlename}\ \thechapter\ \MakeUppercasePdf{#1}}
+}
+\makeatother
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% table of contents
+\addto{\captionsrussian}{\renewcommand*{\contentsname}{\ContentsName}}
+% contents name
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{0pt}
+\renewcommand{\cfttoctitlefont}{\hfil\MakeUppercase}
+\renewcommand{\cftaftertoctitle}{\hfil}
+% for chapters
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftchapfont}{}
+\setlength{\cftbeforechapskip}{0pt}
+\renewcommand{\cftchappagefont}{}
+\cftsetindents{chapter}{0em}{0em}
+\setlength{\cftchapindent}{0pt}
+% no hyphenation
+\makeatletter
+\renewcommand{\@tocrmarg}{2.55em plus1fil}
+\makeatother
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% figures
+\renewcommand{\thefigure}{\arabic{figure}} % numeration
+\captionsetup[figure]{labelsep=endash,justification=centering}
+\graphicspath{{\GraphicsPath}}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% tables
+\renewcommand{\thetable}{\arabic{table}} % numeration
+\DeclareCaptionFormat{caption_table}{#1\\\centering{#3}}
+\captionsetup[table]{format=caption_table,justification=raggedleft,singlelinecheck=false}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% bibliography
+\newenvironment{Bibliography}{}{}
+\makeatletter
+\@ifpackageloaded{biblatex}
+{
+  % BibLaTeX
+  \expandafter\def\expandafter\BibliographyFile\expandafter{\BibliographyFile .bib}
+  \addbibresource{\BibliographyFile}
+  \defbibheading{bibliography}[\BibliographyName]{\Chapter*{#1}} % set bibliography name
+  \defbibenvironment{bibliography} % set numerating of bibliography
+  {\enumerate[label=\arabic*.,itemindent=\parindent]{}
+  {\setlength{\leftmargin}{\bibhang}%
+  \setlength{\itemindent}{-\leftmargin}%
+  \setlength{\itemsep}{\bibitemsep}%
+  \setlength{\parsep}{\bibparsep}}}
+  {\endenumerate}
+  {\item}
+  %
+  \renewcommand{\bibfont}{} % set same font as document
+  \renewcommand{\mkgostheading}[1]{#1} % disable emphasing of title
+  %
+  \DeclareSortingScheme{SortATY}{ % custom sort by author, title, year (ATY)
+    \sort{\field{author}}
+    \sort{\field{title}}
+    \sort{\field{year}}
+  }
+  \AtBeginEnvironment{Bibliography}{\printbibliography}
+} % \@ifpackageloaded{biblatex} true
+{ % \@ifpackageloaded{biblatex} false
+% BibTex
+  \addto{\captionsrussian}{\renewcommand*{\bibname}{\BibliographyName}}
+  \settocbibname{\MakeUppercasePdf{\BibliographyName}}
+  \makeatletter
+  \renewcommand{\@biblabel}[1]{#1.}
+  \makeatother
+
+  \let\OLDthebibliography\thebibliography
+  \renewcommand\thebibliography[1]{
+    \OLDthebibliography{#1}
+    \setlength{\parskip}{0pt}
+    \setlength{\itemsep}{0pt plus 0.3ex}
+  }
+  \AtBeginEnvironment{Bibliography}{
+    \bibliographystyle{ugost2008s}
+    \bibliography{\BibliographyFile}
+  }
+} % \@ifpackageloaded{biblatex} false
+\makeatother
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% Do not overfill text lines (instead of \sloppy)
+\pretolerance 150
+\tolerance 1414
+\hbadness 1414
+\emergencystretch 1.5em
+\hfuzz 0.3pt
+%\clubpenalty=10000
+\widowpenalty=10000
+\vfuzz \hfuzz
+\raggedbottom
+%

@@ -1,0 +1,94 @@
+\documentclass[a4paper,12pt]{report}
+\special{papersize=210mm,297mm} % for dvi and ps
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% packages
+% main (fonts, math): !do not change packages order!
+\usepackage{cmap} % for pdf cyrillic search
+\usepackage{amsmath, amsthm, amssymb} % formulas
+\usepackage{mathtext} % for cyrillic in formulas
+\usepackage[T2A]{fontenc} % font type
+\usepackage[utf8]{inputenc} % utf8
+\usepackage[english,russian]{babel} % for russian hyphenation
+\usepackage{pscyr} % cyrillic Times New Roman
+\renewcommand{\rmdefault}{ftm} % Times New Roman
+
+% formatting
+\usepackage{calc} % calculate math in commands
+\usepackage{graphicx} % graphics (images)
+\usepackage[a4paper,top=20mm,bottom=20mm,left=30mm,right=15mm,includefoot,heightrounded]{geometry} % page geometry
+\usepackage{indentfirst} % indent first paragraph after every section start
+\usepackage[onehalfspacing]{setspace} % space between lines
+\usepackage{enumitem} % lists (remove vertical space)
+\usepackage[figurename=Рисунок]{caption} % caption setup for figures and tables
+\usepackage{titling} % for \thetitle command
+\usepackage{titlesec} % for titles
+\usepackage{tocloft} % for table of contents
+\usepackage{etoolbox} % for hooks, to add bibliography to the right place
+
+% bibliography
+\usepackage[ % biblatex
+  backend=biber, % backend biber
+  texencoding=utf8,
+  bibencoding=utf8,
+  language=auto, % get language from babel
+  babel=other, % multilanguage database
+  bibstyle=gost-standard, % gost
+  hyperref=true, % links
+  sorting=SortATY, % custom sort by author, title, year (ATY)
+  sortcase=false, % ignore case
+  sortlocale=auto
+]{biblatex}
+
+\makeatletter
+\@ifpackageloaded{biblatex}{
+\usepackage{csquotes} % for biblatex
+\usepackage{xpatch} % for biblatex
+}{
+\usepackage[nottoc,chapter]{tocbibind} % add bibliography to toc (for bibtex)
+}
+\makeatother
+
+% misc
+\usepackage{lipsum} % text filler
+
+% pdf links - hyperref (should be last)
+\usepackage[pdffitwindow=true,colorlinks=true]{hyperref} % pdf links
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% work settings
+\author{Иванов И.И.}
+\title{Тема диссертации}
+\newcommand{\Author}{Иванов Иван Иванович}
+\newcommand{\Speciality}{230400 --– Информационные системы и технологии}
+\newcommand{\Professor}{Петров П.П.}
+\newcommand{\ProfessorDegree}{доктор технических наук, профессор}
+\newcommand{\ContentsName}{Содержание}
+\newcommand{\BibliographyName}{Список используемой литературы}
+\newcommand{\BibliographyFile}{src/bibliography}
+\newcommand{\GraphicsPath}{src/img/}
+% work settings
+
+% document settings
+\input{src/pagesetup.tex}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% document
+\begin{document}
+\large
+\input{src/frontpage.tex}
+\newpage
+\pdfbookmark{\ContentsName}{ContentsPdfBookmark}
+\tableofcontents
+\input{src/introduction.tex}
+\input{src/chapter1.tex}
+\input{src/chapter2.tex}
+\input{src/chapter3.tex}
+\input{src/conclusion.tex}
+\begin{Bibliography}
+\end{Bibliography}
+\input{src/appendix.tex}
+\end{document}
