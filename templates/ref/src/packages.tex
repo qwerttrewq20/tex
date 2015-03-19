@@ -1,0 +1,51 @@
+% packages
+% main (fonts, math): !do not change packages order!
+\usepackage{cmap} % for pdf cyrillic search
+\usepackage{amsmath, amsthm, amssymb} % formulas
+\usepackage{mathtext} % for cyrillic in formulas
+\usepackage[T2A]{fontenc} % font type
+\usepackage[utf8]{inputenc} % utf8
+\usepackage[english,russian]{babel} % for russian hyphenation
+%\usepackage{pscyr} % cyrillic Times New Roman
+\renewcommand{\rmdefault}{ftm} % Times New Roman
+
+% formatting
+\usepackage{calc} % calculate math in commands
+\usepackage{graphicx} % graphics (images)
+\usepackage[a4paper,top=20mm,bottom=20mm,left=30mm,right=15mm,includefoot,heightrounded]{geometry} % page geometry
+\usepackage{indentfirst} % indent first paragraph after every section start
+\usepackage[onehalfspacing]{setspace} % space between lines
+\usepackage{enumitem} % lists (remove vertical space)
+\usepackage[figurename=Рисунок]{caption} % caption setup for figures and tables
+\usepackage[labelformat=simple]{subcaption} % for subfigures and subtables
+\usepackage[normalem]{ulem} % underline
+\usepackage{lastpage} % number of pages
+\usepackage[figure,table,xspace]{totalcount} % number of figures, tables
+\usepackage{titling} % for \thetitle command
+\usepackage{titlesec} % for titles
+\usepackage{tocloft} % for table of contents
+\usepackage{etoolbox} % for hooks, to add bibliography to the right place
+\usepackage[thinlines]{easytable} % easytable
+\usepackage{tabu} % another tables
+\usepackage{longtable} % another tables
+\usepackage{flafter} % put floats only after first ref
+\usepackage{chngcntr} % global figure numbering
+
+% bibliography
+\usepackage{csquotes} % for biblatex
+\usepackage{xpatch} % for biblatex
+\usepackage[ % biblatex
+	backend=biber, % backend biber
+	texencoding=utf8,
+	bibencoding=utf8,
+	autolang=other,
+	bibstyle=gost-standard, % gost
+	hyperref=true, % links
+	sorting=none, %SortATY, % custom sort by author, title, year (ATY)
+	sortcase=false, % ignore case
+	sortlocale=auto, % auto sort locale
+	sortcites=true, % sort citations in []
+]{biblatex}
+
+% pdf links - hyperref (should be last)
+\usepackage[pdffitwindow=true,colorlinks=false]{hyperref} % pdf links

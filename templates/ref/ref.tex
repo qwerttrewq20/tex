@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{report}
+\special{papersize=210mm,297mm} % for dvi and ps
+
+% packages
+%
+% Тестовое наполнение текстом
+% При написании работы - удалить пакет и комманды \lipsum
+\usepackage{lipsum}
+%
+\input{src/packages.tex}
+
+% work settings
+\author{Петров П.П.}
+\title{Тема}
+\newcommand{\WorkType}{Реферат}
+\newcommand{\Subject}{Предмету}
+\newcommand{\Author}{Петров П.П.}
+\newcommand{\Professor}{Иванов И.И.}
+\newcommand{\ProfessorDegree}{д.т.н., проф.}
+\newcommand{\ContentsName}{Содержание}
+\newcommand{\BibliographyName}{Список используемой литературы}
+\newcommand{\BibliographyFile}{src/bibliography}
+\newcommand{\BibliographyFileAux}{}
+\newcommand{\GraphicsPath}{src/img/}
+% work settings
+
+% document settings
+\input{src/pagesetup.tex}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+% document
+\begin{document}
+\large % 14pt
+
+\input{src/frontpage.tex}
+\newpage
+
+\pdfbookmark{\ContentsName}{ContentsPdfBookmark}
+\tableofcontents
+
+\PreMainText
+\input{src/introduction.tex}
+\input{src/chapter1.tex}
+\input{src/chapter2.tex}
+\input{src/conclusion.tex}
+\AfterMainText
+\Bibliography
+\AfterBibliography
+\AppendixStart
+\input{src/appendix.tex}
+\end{document}

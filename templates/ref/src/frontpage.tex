@@ -1,0 +1,77 @@
+\newlength{\frontpagefk} % Ширина поля Факультет/Кафедра
+\setlength{\frontpagefk}{6cm}
+\newlength{\frontpagerb} % Ширина надписей Руководитель/Студент и пр. под темой
+\setlength{\frontpagerb}{6cm}
+\newlength{\frontpagerbspace} % ??? (do not remove)
+\setlength{\frontpagerbspace}{1cm}
+\newlength{\FrontPageSubjSpace} % Ширина пробела до и после названия предмета
+\setlength{\FrontPageSubjSpace}{1cm}
+\newlength{\FrontPageTopicSpace} % Ширина пробела до и после темы
+\setlength{\FrontPageTopicSpace}{0.0cm}
+
+\thispagestyle{empty}
+
+\pdfbookmark{Титульный лист}{FrontpagePdfBookmark}
+
+\begin{center}
+\baselineskip=12pt
+{\normalsize Министерство образования и науки Российской Федерации}
+
+\textbf{Муромский институт (филиал)}
+
+{\small федерального государственного бюджетного образовательного учреждения}
+
+{\small высшего профессионального образования}
+
+\textbf{<<Владимирский государственный университет}
+
+\textbf{\makebox[\textwidth]{имени Александра Григорьевича и Николая Григорьевича Столетовых>>}}
+
+{\normalsize \textbf{(МИ (филиал) ВлГУ)}}
+\end{center}
+
+\vspace{\fill}
+
+\begin{center}
+{\fontsize{2cm}{1em}\textsl{\WorkType}}
+\end{center}
+
+\bigskip
+
+\parbox{15cm}{\centering{
+по \underline{\makebox[\FrontPageSubjSpace]{}\Subject\makebox[\FrontPageSubjSpace]{}}}}
+
+\bigskip
+
+\parbox{15cm}{\centering{Тема: \uline{\makebox[\FrontPageTopicSpace]{}\thetitle\makebox[\FrontPageTopicSpace]{}}}}
+
+\vspace{\fill}
+
+\bigskip
+\bigskip
+
+\begin{flushright}
+\parbox{0.4\textwidth}{
+\textbf{Выполнил:}
+
+студент
+\Author
+
+\textbf{Научный руководитель:}
+
+\ProfessorDegree\ 
+\Professor
+
+\textbf{Проверил:}
+
+к.т.н., доц.
+Сидоров С.С.
+}
+\end{flushright}
+
+
+\vspace{\fill}
+
+\begin{center}
+Муром -- \the\year
+\end{center}
