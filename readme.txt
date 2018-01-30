@@ -2,7 +2,7 @@
 шаблонов документов в системе компьютерной вёрстки TeX.
 
 Ссылка на репозиторий:
-https://bitbucket.org/egor_pugin/tex/
+https://github.com/egorpugin/tex/
 
 
 Документация:
@@ -41,6 +41,3 @@ MacTeX - http://www.tug.org/mactex/
 
 Многофункциональный редактор исходного кода (все платформы):
 TeX Studio - http://texstudio.sourceforge.net/
-
-Редактор WYSIWYM (англ. what you see is what you mean, примерный перевод — «видишь то, что подразумеваешь»), наподобие Microsoft Word:
-http://www.lyx.org/
